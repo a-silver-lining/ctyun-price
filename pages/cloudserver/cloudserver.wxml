@@ -1,0 +1,87 @@
+<!--pages/cloudserver/cloudserver.wxml-->
+<!--mode='aspectFit' 全局-->
+<!--radio组件的 class="radio" -->
+<view class='imagelogo'>
+  <image mode='aspectFill' class='ctyunlogo' src='../../images/ctyunlogo.png'></image>
+</view>
+
+<view class="Resource pool">
+  <text class="Rp__title">1.请选择资源池：(暂未上线雄安和蒙贵，敬请期待……)</text>
+  <radio-group class="split-line" bindchange="rPRadioChange">
+    <radio wx:for-items="{{rpItems}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+      <text>{{item.value}}</text>
+    </radio>
+  </radio-group>
+</view>
+
+<view class='OS_Type'>
+  <!--操作系统类型  需要根据资源池匹配 -->
+  <text class="cpu/mem__title">2.操作系统版本：</text>
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <view class="picker">
+      {{multiArray[1][multiIndex[1]]}}
+    </view>
+  </picker>
+</view>
+
+<view class='split-line'></view>
+
+<view class='vcpu/memory'>
+  <!--vCPU/内存，变量参数需要改根据选择的节点显示对应资源池配置信息 -->
+  <text class="cpu/mem__title">3.vCPU/内存(复选框请一定要确认按钮)：</text>
+  <picker mode="multiSelector" bindchange="cm_bindMultiPickerChange" bindcolumnchange="cm_bindMultiPickerColumnChange"  value="{{cm_multiIndex}}" range="{{cm_multiArray}}">
+    <view class="picker">
+      类型：{{cm_multiArray[0][cm_multiIndex[0]]}}，{{cm_multiArray[1][cm_multiIndex[1]]}}(核)，{{cm_multiArray[2][cm_multiIndex[2]]}}(G)
+    </view>
+  </picker>
+</view>
+
+<view class='split-line'></view>
+
+<view class="System disc">
+  <text class="Sd__title">4.系统盘（G）：</text>
+  <radio-group bindchange="sDRadioChange">
+    <radio wx:for-items="{{sdItems}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+      <text>{{item.value}}</text>
+    </radio>
+  </radio-group>
+  <input class='input' type="number" maxlength='4' bindblur="handleSysDiscSize" placeholder='请输入系统盘大小，默认40G，最大1000G' value='{{inputSysDiscTxt}}'></input>
+</view>
+<view class='split-line'></view>
+<view class="Data disc">
+  <text class="Sd__title">5.数据盘（G）：</text>
+  <radio-group bindchange="dDRadioChange">
+    <radio wx:for-items="{{ddItems}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+      <text>{{item.value}}</text>
+    </radio>
+  </radio-group>    <!--bindblur="handleDataDiscSize" -->
+  <input class='input' type="number" maxlength='6' bindblur="handleDataDiscSize" placeholder='请输入数据盘大小，10G起步订购'  value='{{inputDataDiscTxt}}' ></input>
+</view>
+
+<view class='split-line'></view>
+
+<view>
+  <!--带宽（M）：滑动框，默认为0 -->  <!--<slider max="300" bindchange="handleDwchange" show-value/> -->
+  <text class="bandwidth__title">6.带宽（M）：</text>
+  <view class="body-view">
+    <input class='input' type="number" maxlength='3' bindblur="handleDwchange" placeholder='请输入带宽大小，最大300M' value='{{inputDwTxt}}'></input>
+  </view>
+</view>
+<view class='split-line'></view>
+<view>
+  <!--个数（台）：请输入台数：默认为1-->
+  <text class="NumCloudServer__title">7.个数（台）：</text>
+  <view class="body-view">
+    <input class='input' type="number" maxlength='3' bindblur="handleNumCloudServer" placeholder='请输入台数：默认为1' value='{{inputNumCloudTxt}}'></input>
+  </view>
+</view>
+<view class='split-line'></view>
+<form bindsubmit="handleCountPrice">
+<view >
+    <button class='btn-area' formType="submit">计算价格</button>
+</view>
+<label><view>原价：{{}}元/月，{{}}元/年</view></label>
+<label><view>九折：{{}}元/月，{{}}元/年</view></label>
+<label><view>八折：{{}}元/月，{{}}元/年</view></label>
+<label><view>七折：{{}}元/月，{{}}元/年</view></label>
+</form>

@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/cloudserver/cloudserver",
+    "pages/logs/logs",
+    "pages/demo/demo",
+    "pages/jscode/jscode",
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "天翼云价格计算器",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

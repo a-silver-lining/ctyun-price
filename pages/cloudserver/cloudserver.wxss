@@ -1,0 +1,29 @@
+.ctyunlogo{
+  width: 330rpx;
+  height: 100rpx;
+}
+.imagelogo{
+  background-color: rgb(241, 235, 235);
+  height: 100rpx;
+  text-align: center;
+}
+.split-line {
+    margin-top: 2px;
+    border-bottom: 1px solid #ddd;
+}
+.radio {
+    display: block;
+    border-top: 1px solid #ddd;
+    padding: 5px;
+}
+.input {
+    background-color:  rgb(241, 235, 235);
+    border-bottom: 1px solid #ddd;
+}
+.btn-area {
+  height: 70rpx;
+  background-color: rgb(20, 212, 20);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

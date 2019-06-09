@@ -1,0 +1,42 @@
+/* pages/demo/demo.wxss */
+
+/* line-height垂直居中  text-align水平居中  */
+/* font-size字体加粗 */
+.myclass{
+  background-color: yellow;
+  color: rgb(40, 3, 250);
+  width:100%;
+  height:100rpx;
+  line-height: 100rpx; 
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.outer-box{
+  background-color: green;
+  width: 600rpx;
+  height: 600rpx;
+  /*padding-top: 20rpx;*/
+  display: flex;
+  flex-direction: row; /*column垂直方向上的居中*/
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-box{
+  /*margin-top: 20rpx;*/
+  margin: 20rpx 0rpx 50rpx 20rpx;
+  background-color: red;
+  width: 300rpx;
+  height: 200rpx;
+}
+
+.fixed-box{
+  position: fixed; /* 绝对定位 */
+  right: 0rpx;
+  bottom: 20rpx;
+  background-color: blue;
+  width: 100rpx;
+  height: 100rpx;
+}

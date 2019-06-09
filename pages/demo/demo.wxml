@@ -1,0 +1,16 @@
+<!--pages/demo/demo.wxml-->
+<text>demo页面 </text>
+<view class='myclass' style='background-color: green'> {{motto}} </view>
+
+<view class='container'>
+<view class='outer-box'>
+<view class='inner-box'>
+
+</view>
+<view class='inner-box'>
+
+</view>
+</view>
+</view>
+
+<view class='fixed-box'></view>
