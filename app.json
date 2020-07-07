@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/cloudserver/cloudserver",
+    "pages/cloudserver_xa/cloudserver_xa",
     "pages/logs/logs",
     "pages/demo/demo",
     "pages/jscode/jscode",

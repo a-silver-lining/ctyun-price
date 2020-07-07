@@ -31,13 +31,5 @@ App({
     //带宽,低于5M是20元/M，高于5M是36元/M
     bandWidth1:20,
     bandwidth2:36,
-
-    /*暂不使用
-    //定义资源池节点 默认为石家庄节点
-    rPname: "SJZ",
-    //定义系统盘类型  默认为SATA
-    sysDicsType: "SATA",
-    //定于数据盘类型  默认为SATA
-    dataDicsType: "SATA",*/
   }
 })

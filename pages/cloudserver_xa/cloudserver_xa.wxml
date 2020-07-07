@@ -1,4 +1,4 @@
-<!--pages/cloudserver/cloudserver.wxml-->
+<!--pages/cloudserver_xa/cloudserver_xa.wxml-->
 <!--mode='aspectFit' 全局-->
 <!--radio组件的 class="radio" -->
 <view class='imagelogo'>
@@ -27,7 +27,7 @@
 
 <view class='view-choice'>
   <!--vCPU/内存，变量参数需要改根据选择的节点显示对应资源池配置信息 -->
-  <text class="text-area">3.vCPU/内存(复选框请一定要点击确认按钮)：</text>
+  <text class="text-area">3.vCPU/内存(复选框一定要点击确认按钮)：</text>
   <picker mode="multiSelector" bindchange="cm_bindMultiPickerChange" bindcolumnchange="cm_bindMultiPickerColumnChange" value="{{cm_multiIndex}}" range="{{cm_multiArray}}">
     <view class="Array-view">
       类型：{{cm_multiArray[0][cm_multiIndex[0]]}}，{{cm_multiArray[1][cm_multiIndex[1]]}}(核)，{{cm_multiArray[2][cm_multiIndex[2]]}}(G)
@@ -35,22 +35,20 @@
   </picker>
 </view>
 
-
 <view class="view-choice">
   <text class="text-area">4.系统盘（G）：</text>
   <radio-group bindchange="sDRadioChange">
-    <radio wx:for-items="{{sdItems}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+    <radio wx:for-items="{{sdItems}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}" disabled='true'>
       <text class="text-choice">{{item.value}}</text>
     </radio>
   </radio-group>
-  <input class='input' type="number" maxlength='4' bindblur="handleSysDiscSize" placeholder='请输入系统盘大小，默认40G，最大1024G' value='{{inputSysDiscTxt}}'></input>
+  <input class='input' type="number" maxlength='4' bindblur="handleSysDiscSize" placeholder='40' value='{{inputSysDiscTxt}}' disabled='true'></input>
 </view>
-
 
 <view class="view-choice">
   <text class="text-area">5.数据盘（G）：</text>
   <radio-group bindchange="dDRadioChange">
-    <radio wx:for-items="{{ddItems}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+    <radio wx:for-items="{{ddItems}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}"disabled='true'>
       <text class="text-choice">{{item.value}}</text>
     </radio>
   </radio-group>

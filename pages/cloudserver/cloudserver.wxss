@@ -1,29 +1,80 @@
-.ctyunlogo{
+.ctyunlogo {
   width: 330rpx;
   height: 100rpx;
 }
-.imagelogo{
+
+.imagelogo {
   background-color: rgb(241, 235, 235);
   height: 100rpx;
   text-align: center;
 }
+
 .split-line {
-    margin-top: 2px;
-    border-bottom: 1px solid #ddd;
+  margin-top: 2px;
+  border-bottom: 1px solid #ddd;
 }
+
 .radio {
-    display: block;
-    border-top: 1px solid #ddd;
-    padding: 5px;
+  margin-top: 10rpx;
+  display: block;
+  border-top: 1px solid #ddd;
+  padding: 5px;
 }
+
 .input {
-    background-color:  rgb(241, 235, 235);
-    border-bottom: 1px solid #ddd;
+  height: 1.8rem;
+  min-height: 1.8rem;
+  margin: 10rpx 0 10rpx 10rpx;
+  background-color: rgb(241, 235, 235);
+  border-bottom: 1px solid #ddd;
+  font-size: 12px; /*设置文字字号*/
+  color: rgb(12, 4, 4); /*设置文字颜色*/
+  font-weight: bold; /*设置字体加粗*/
+  font-family: "楷体"; /*设置字体为宋体*/
+  
 }
+
 .btn-area {
+  margin-bottom: 30rpx;
   height: 70rpx;
-  background-color: rgb(20, 212, 20);
+  background-color: #0bc0ee;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.text-area {
+  /*设置标题*/
+  width: fit-content;
+  font-size: 15px; /*设置文字字号*/
+  color: rgb(12, 4, 4); /*设置文字颜色*/
+  font-weight: bold; /*设置字体加粗*/
+  font-family: "宋体"; /*设置字体为宋体*/
+}
+
+.text-choice {
+  width: fit-content;
+  font-size: 13px; /*设置文字字号*/
+  color: rgb(12, 4, 4); /*设置文字颜色*/
+  font-weight: bold; /*设置字体加粗*/
+  font-family: "楷体"; /*设置字体为宋体*/
+}
+
+.view-choice {
+  /*设置选项*/
+  margin-bottom:40rpx;
+}
+
+.Array-view{
+  margin-top: 15rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  height: 1.8rem;
+  min-height: 1.8rem;
+  background-color: rgb(241, 235, 235);
+  font-size: 13px; /*设置文字字号*/
+  color: rgb(12, 4, 4); /*设置文字颜色*/
+  font-weight: bold; /*设置字体加粗*/
+  font-family: "楷体"; /*设置字体为宋体*/
 }

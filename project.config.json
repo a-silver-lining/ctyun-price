@@ -10,7 +10,9 @@
 		"minified": true,
 		"newFeature": true,
 		"autoAudits": false,
-		"uglifyFileName": true
+		"uglifyFileName": true,
+		"checkInvalidKey": true,
+		"useCompilerModule": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.6.4",
@@ -71,9 +73,17 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "cloudserver",
+					"id": 4,
+					"name": "石家庄",
 					"pathName": "pages/cloudserver/cloudserver",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "雄安",
+					"pathName": "pages/cloudserver_xa/cloudserver_xa",
+					"query": "",
 					"scene": null
 				}
 			]
